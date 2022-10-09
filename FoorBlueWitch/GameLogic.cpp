@@ -1,6 +1,7 @@
 #include "FoorBlueWitch.h"
 #include "GameObject.h"
 #include "ControllerBase.h"
+#include "PlayerController.h"
 #include "Character.h"
 #include "D2d.h"
 
@@ -9,12 +10,12 @@ void GameStart() {
 		new Character (
 			new Renderer(L"ÁÖÀÎ°ø±âº»", SourceType::Animator),
 			Vector(0,0),
-			100,
+			80,
 			L"ÆÄ¶û¸¶³à",
 			100
 		);
 
-	( new ControllerBase() )->Possess(testCharacter);
+	( new PlayerController() )->Possess(testCharacter);
 }
 
 void GameUpdate() {
