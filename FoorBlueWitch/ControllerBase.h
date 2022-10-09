@@ -7,10 +7,15 @@
 //       컨트롤러를 가지고 있는 가변배열
 extern std::vector<class ControllerBase*> controllerList;
 
+void MessageByLeftClick(struct tagPOINT mousePos);
+void MessageByRightClick(struct tagPOINT mousePos);
+
+extern class ControllerBase* player;
+
 //캐릭터를 다루는 컨트롤러
 class ControllerBase {
-	class Character* target;
-
+	class Character* targetCharacter;
+	Vector targetPosition;
 public:
 	ControllerBase() {
 		controllerList.push_back(this);

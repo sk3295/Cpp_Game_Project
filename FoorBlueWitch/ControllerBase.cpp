@@ -1,6 +1,12 @@
 #include "ControllerBase.h"
 #include "Character.h"
+#include <Windows.h>
 std::vector<class ControllerBase*> controllerList;
+
+void MessageByLeftClick(tagPOINT mousePos) {};
+void MessageByRightClick(tagPOINT mousePos) {
+	//player->
+};
 
 void ControllerBase::Possess(class Character* wantTarget) {
 	ControllerBase* preController = wantTarget->myController;

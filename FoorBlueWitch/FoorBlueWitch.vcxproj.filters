@@ -51,6 +51,9 @@
     <ClInclude Include="ControllerBase.h">
       <Filter>헤더 파일\Controllers</Filter>
     </ClInclude>
+    <ClInclude Include="PlayerController.h">
+      <Filter>헤더 파일\Controllers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FoorBlueWitch.cpp">
