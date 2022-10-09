@@ -110,12 +110,12 @@ ATOM MyRegisterClass(HINSTANCE hInstance) {
     wcex.hInstance      = hInstance;
 
 
-    wcex.hIcon          = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_FOORBLUEWITCH));
+    wcex.hIcon          = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_ICON2));
     wcex.hCursor        = LoadCursor(nullptr, IDC_ARROW);
     wcex.hbrBackground  = (HBRUSH)(COLOR_WINDOW+1);
     wcex.lpszMenuName   = nullptr; //상단바 메뉴
     wcex.lpszClassName  = szWindowClass;
-    wcex.hIconSm        = LoadIcon(wcex.hInstance, MAKEINTRESOURCE(IDI_SMALL));
+    wcex.hIconSm        = LoadIcon(wcex.hInstance, MAKEINTRESOURCE(IDI_ICON2));
 
     return RegisterClassExW(&wcex);
 }

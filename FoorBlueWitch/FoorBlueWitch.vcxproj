@@ -163,6 +163,7 @@
     <ResourceCompile Include="FoorBlueWitch.rc" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="B_witch.ico" />
     <Image Include="FoorBlueWitch.ico" />
     <Image Include="small.ico" />
   </ItemGroup>

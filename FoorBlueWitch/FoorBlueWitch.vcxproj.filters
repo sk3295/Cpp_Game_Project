@@ -87,5 +87,8 @@
     <Image Include="FoorBlueWitch.ico">
       <Filter>리소스 파일</Filter>
     </Image>
+    <Image Include="B_witch.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
   </ItemGroup>
 </Project>
