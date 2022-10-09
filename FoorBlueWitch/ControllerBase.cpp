@@ -5,8 +5,18 @@ std::vector<class ControllerBase*> controllerList;
 
 void MessageByLeftClick(tagPOINT mousePos) {};
 void MessageByRightClick(tagPOINT mousePos) {
-	//player->
+
 };
+
+void ControllerBase::SetTargetCharacter(Character* wantTarget) {
+	owner = wantTarget;
+	targetPosition = wantTarget->position;
+}
+
+void ControllerBase::SetTargetPosition(Vector wantPosition) {
+	owner = nullptr;
+	targetPosition = wantPosition;
+}
 
 void ControllerBase::Possess(class Character* wantTarget) {
 	ControllerBase* preController = wantTarget->myController;
@@ -14,20 +24,20 @@ void ControllerBase::Possess(class Character* wantTarget) {
 	if (preController != nullptr) { preController->Unpossess(); };
 
 	wantTarget->myController = this;
-	target = wantTarget;
+	owner = wantTarget;
 };
 
 void ControllerBase::Unpossess() {
-	if (target == nullptr) return;
-	if (target->myController == this) { target->myController = nullptr; };
+	if (owner == nullptr) return;
+	if (owner->myController == this) { owner->myController = nullptr; };
 
-	target = nullptr;
+	owner = nullptr;
 };
 
 
 void ControllerBase::Think() {
 	//대상이 없으면 정지
-	if (target == nullptr) return;
+	if (owner == nullptr) return;
 
-	target->MoveTo( Vector(500, 300) );
+	owner->MoveTo( Vector(500, 300) );
 };

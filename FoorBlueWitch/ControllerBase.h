@@ -14,7 +14,7 @@ extern class ControllerBase* player;
 
 //캐릭터를 다루는 컨트롤러
 class ControllerBase {
-	class Character* targetCharacter;
+	class Character* owner;
 	Vector targetPosition;
 public:
 	ControllerBase() {
@@ -26,4 +26,7 @@ public:
 	void Unpossess();
 
 	void Think();
+
+	void SetTargetCharacter(class Character* wantTarget);
+	void SetTargetPosition(Vector wantPosition);
 };
